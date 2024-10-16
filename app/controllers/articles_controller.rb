@@ -60,7 +60,7 @@ class ArticlesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_article
-      @article = Article.better_find_by_id(params)
+      @article = Article.better_find_by_id(params.permit(:id))
     end
 
     # Only allow a list of trusted parameters through.
