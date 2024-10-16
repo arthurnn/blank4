@@ -1,5 +1,5 @@
 class Article < ApplicationRecord
-  def self.better_find_by_id(params)
-    Article.find_by "id = '#{params[:id]}'"
+  def self.better_find_by_id(id)
+    Article.find_by "id = '#{id}'"
   end
 end
