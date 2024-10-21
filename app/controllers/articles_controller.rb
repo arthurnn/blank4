@@ -8,7 +8,7 @@ class ArticlesController < ApplicationController
 
   # GET /articles/1 or /articles/1.json
   def show
-    @article = Article.find_article_by(params.permit!)
+    @article = Article.find_article_by(params[:id])
   end
 
   # GET /articles/new
